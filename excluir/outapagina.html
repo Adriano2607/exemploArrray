@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Outra Página</title>
+</head>
+<body>
+
+    <button><a href="index.html">pagina</a></button>
+
+    <script>
+        // Recupera o array do sessionStorage
+        const storedArray = sessionStorage.getItem('meuArray');
+        const meuArray = storedArray ? JSON.parse(storedArray) : [];
+
+        // Modifica o array conforme necessário
+        meuArray.push('novoElemento');
+
+        // Salva o array modificado no sessionStorage
+        sessionStorage.setItem('meuArray', JSON.stringify(meuArray));
+
+        console.log(meuArray)
+    </script>
+</body>
+</html>
